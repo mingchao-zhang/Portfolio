@@ -23,7 +23,10 @@ export const Interface = () => {
   return (
     <div className="flex flex-col items-center w-screen">
       <AboutSection />
-      <SkillsSection />
+      <Section>
+        <h1>Skills</h1>
+      </Section>
+      {/* <SkillsSection /> */}
       <Section>
         <h1>Projects</h1>
       </Section>
@@ -37,23 +40,23 @@ export const Interface = () => {
 const AboutSection = () => {
   return (
     <Section>
-      <h1 className="text-6xl font-extrabold leading-snug">
+      <h1 className="text-7xl text-gray-700  font-bold leading-snug">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Mingchao Zhang</span>
+        <span className="px-1">Mingchao</span>
       </h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        className="text-xl text-gray-600 mt-4"
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         // Add more delay to the description text to let items show up one by one
         transition={{ duration: 1, delay: 1.5 }}
       >
-        I like to climb
+        - a student, software engineer,
         <br />
-        and snowboard
+        climber and snowboarder
       </motion.p>
-      <motion.button
+      {/* <motion.button
         className={`bg-indigo-600 text-white py-4 px-8
                     rounded-lg font-bold text-lg mt-16`}
         // button has the most delay and shows up the last
@@ -62,7 +65,7 @@ const AboutSection = () => {
         transition={{ duration: 1, delay: 2 }}
       >
         Contact me
-      </motion.button>
+      </motion.button> */}
     </Section>
   );
 };
