@@ -29,7 +29,7 @@ export const Experience = (props) => {
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
   });
 
-  const resume = useGLTF("public/models/resume.glb");
+  const resume = useGLTF("models/resume.glb");
   const handleResumeClick = () => {
     // Redirect to the local PDF file
     window.open("/Portfolio/public/files/Mingchao_Zhang_Resume.pdf", "_blank");
