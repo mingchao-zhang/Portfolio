@@ -32,7 +32,7 @@ export const Experience = (props) => {
   const resume = useGLTF("models/resume.glb");
   const handleResumeClick = () => {
     // Redirect to the local PDF file
-    window.open("/Portfolio/public/files/Mingchao_Zhang_Resume.pdf", "_blank");
+    window.open("files/Mingchao_Zhang_Resume.pdf", "_blank");
   };
   return (
     <>
