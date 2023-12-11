@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { currentProjectAtom, projects } from "./Projects";
 
 const Section = (props) => {
   const { children } = props;
@@ -27,9 +29,7 @@ export const Interface = () => {
         <h1>Skills</h1>
       </Section> */}
       <SkillsSection />
-      <Section>
-        <h1>Projects</h1>
-      </Section>
+      <ProjectsSection />
       <Section>
         <h1>Contact</h1>
       </Section>
@@ -73,19 +73,19 @@ const AboutSection = () => {
 const skills = [
   {
     title: "Algorithm",
-    level: 90,
+    level: 95,
   },
   {
     title: "System Design",
-    level: 80,
+    level: 90,
   },
   {
     title: "Climbing",
-    level: 85,
+    level: 70,
   },
   {
     title: "Snowboarding",
-    level: 80,
+    level: 75,
   },
   {
     title: "Cooking",
@@ -202,6 +202,41 @@ const SkillsSection = () => {
           </div>
         </div>
       </motion.div>
+    </Section>
+  );
+};
+
+const ProjectsSection = () => {
+  const [currentProject, setCurrentProject] = useAtom(currentProjectAtom);
+
+  const nextProject = () => {
+    setCurrentProject((currentProject + 1) % projects.length);
+  };
+
+  const previousProject = () => {
+    setCurrentProject((currentProject - 1 + projects.length) % projects.length);
+  };
+
+  return (
+    <Section>
+      <div
+        className="flex w-full h-full gap-8 justify-center items-center"
+        style={{ marginTop: "65%" }}
+      >
+        <button
+          className="text-gray-700 hover:text-orange-400 text-xl transition-colors"
+          onClick={previousProject}
+        >
+          ← Prev
+        </button>
+        <h2 className="text-6xl font-bold text-gray-700">Projects</h2>
+        <button
+          className="text-gray-700 hover:text-orange-400 text-xl transition-colors"
+          onClick={nextProject}
+        >
+          Next →
+        </button>
+      </div>
     </Section>
   );
 };

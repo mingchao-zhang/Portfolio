@@ -6,6 +6,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { framerMotionConfig } from "../config";
 import { Avatar } from "./Avatar";
 import { useGLTF, Float } from "@react-three/drei";
+import { Projects } from "./Projects";
 
 export const Experience = (props) => {
   const { section, menuOpened } = props;
@@ -72,6 +73,22 @@ export const Experience = (props) => {
             rotateY: 0,
             rotateZ: 0,
           },
+          2: {
+            y: -viewport.height + 0.5,
+            x: 0,
+            z: 7,
+            rotateX: 0,
+            rotateY: 0,
+            rotateZ: 0,
+          },
+          3: {
+            y: -viewport.height + 0.5,
+            x: 0,
+            z: 7,
+            rotateX: 0,
+            rotateY: 0,
+            rotateZ: 0,
+          },
         }}
       >
         <Float
@@ -92,6 +109,7 @@ export const Experience = (props) => {
           />
         </Float>
       </motion.group>
+      <Projects />
     </>
   );
 };
