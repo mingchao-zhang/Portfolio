@@ -23,10 +23,10 @@ export const Interface = () => {
   return (
     <div className="flex flex-col items-center w-screen">
       <AboutSection />
-      <Section>
+      {/* <Section>
         <h1>Skills</h1>
-      </Section>
-      {/* <SkillsSection /> */}
+      </Section> */}
+      <SkillsSection />
       <Section>
         <h1>Projects</h1>
       </Section>
@@ -76,35 +76,35 @@ const skills = [
     level: 90,
   },
   {
-    title: "Climb",
-    level: 90,
+    title: "System Design",
+    level: 80,
   },
   {
-    title: "Snowboard",
-    level: 90,
+    title: "Climbing",
+    level: 85,
+  },
+  {
+    title: "Snowboarding",
+    level: 80,
   },
   {
     title: "Cooking",
-    level: 50,
-  },
-  {
-    title: "Sleeping",
-    level: 80,
+    level: 60,
   },
 ];
 
 const languages = [
   {
     title: "Python",
-    level: 90,
+    level: 95,
   },
   {
     title: "C++",
-    level: 80,
+    level: 90,
   },
   {
-    title: "English",
-    level: 90,
+    title: "Golang",
+    level: 80,
   },
 ];
 

@@ -26,7 +26,7 @@ function App() {
           {/* Control scrolling between the 4 different pages */}
           <ScrollControls pages={4} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
-            {/* make the room to move when we scroll */}
+            {/* make the room move when we scroll */}
             <Scroll>
               <Experience section={section} menuOpened={menuOpened} />
             </Scroll>
