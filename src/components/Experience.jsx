@@ -31,10 +31,7 @@ export const Experience = (props) => {
   });
 
   const resume = useGLTF("models/resume.glb");
-  const handleResumeClick = () => {
-    // Redirect to the local PDF file
-    window.open("files/Mingchao_Zhang_Resume.pdf", "_blank");
-  };
+  const Mailbox = useGLTF("models/Mailbox.glb");
   return (
     <>
       <ambientLight intensity={1.1} />
@@ -93,7 +90,10 @@ export const Experience = (props) => {
       >
         <Float
           rotationIntensity={1}
-          onClick={handleResumeClick}
+          onClick={() => {
+            // Redirect to the local PDF file
+            window.open("files/Mingchao_Zhang_Resume.pdf", "_blank");
+          }}
           onPointerOver={() => {
             document.body.style.cursor = "pointer";
           }}
@@ -110,6 +110,24 @@ export const Experience = (props) => {
         </Float>
       </motion.group>
       <Projects />
+
+      <group position-y={-viewport.height * 3 - 1.5}>
+        <primitive
+          object={Mailbox.scene}
+          scale={[2, 2, 2]}
+          position={[4, -5, 0]}
+          rotation={[0, -1, 0.15]}
+          onPointerOver={() => {
+            document.body.style.cursor = "pointer";
+          }}
+          onPointerOut={() => {
+            document.body.style.cursor = "auto";
+          }}
+          onClick={() => {
+            window.location.href = "mailto:zmcmarkzhang@gmail.com";
+          }}
+        />
+      </group>
     </>
   );
 };

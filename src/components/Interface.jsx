@@ -31,7 +31,9 @@ export const Interface = () => {
       <SkillsSection />
       <ProjectsSection />
       <Section>
-        <h1>Contact</h1>
+        <h1 className="text-7xl text-gray-700  font-bold leading-snug">
+          Contact
+        </h1>
       </Section>
     </div>
   );
