@@ -21,3 +21,7 @@ After actively working on a front-end project like this one over the span of a m
 ## East egg
 
 Sitting behind the window by the tree is me daydreaming :)
+
+## References
+
+Resources and tutorials I have used are compiled in [references.md](./references.md)
