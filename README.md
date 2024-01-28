@@ -18,7 +18,7 @@ The rest of the project (animation, deployment, and positioning) is definitely n
 
 After actively working on a front-end project like this one over the span of a month, I am excited about the future of 3D website development and genuinely humbled by the various challenges front-end developers face day to day. Never will I naively say: "That's easy because it's front-end" 😅.
 
-## East egg
+## Easter egg
 
 Sitting behind the window by the tree is me daydreaming :)
 
